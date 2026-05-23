@@ -3,7 +3,7 @@ import { Code2, Coffee } from 'lucide-react';
 import './About.css';
 
 const stats = [
-  { icon: <Code2 size={22} />, value: '+', label: 'Projects Built' },
+  { icon: <Code2 size={22} />, value: '5+', label: 'Projects Built' },
   { icon: <Coffee size={22} />, value: '3+', label: 'Years Experience' },
 ];
 
