@@ -47,15 +47,10 @@ export default function About() {
             <div className="about__bio-content">
               <h3 className="about__bio-title">Who I Am</h3>
               <p className="about__bio-text">
-                I'm a software developer who thrives on turning complex problems into elegant,
-                user-friendly solutions. With a strong foundation in both frontend and backend
-                technologies, I build full-stack applications that are not only functional but
-                also beautiful.
+                Placeholder
               </p>
               <p className="about__bio-text">
-                When I'm not coding, you'll find me exploring new technologies, contributing
-                to open-source projects, or sharing knowledge with the developer community.
-                I believe great software is built at the intersection of design and engineering.
+                Placeholder
               </p>
             </div>
           </div>
