@@ -32,7 +32,7 @@ export default function About() {
           <span className="section-label">About Me</span>
           <h2 className="section-title">Passionate about crafting digital experiences</h2>
           <p className="section-subtitle">
-            Here's a little more about who I am, what I do, and the technologies I love working with.
+            Here'shnologies I love working with.
           </p>
         </div>
 
