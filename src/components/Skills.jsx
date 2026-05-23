@@ -6,33 +6,32 @@ const skillCategories = [
     title: 'Frontend',
     color: '#7c3aed',
     skills: [
-      { name: 'React / Next.js', level: 95 },
-      { name: 'JavaScript / TypeScript', level: 92 },
-      { name: 'HTML & CSS', level: 95 },
-      { name: 'Tailwind CSS', level: 88 },
-      { name: 'Redux / Zustand', level: 82 },
+      { name: 'React', icon: 'devicon-react-original' },
+      { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+      { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+      { name: 'HTML5', icon: 'devicon-html5-plain' }
     ],
   },
   {
     title: 'Backend',
     color: '#06b6d4',
     skills: [
-      { name: 'Node.js / Express', level: 90 },
-      { name: 'Python / FastAPI', level: 85 },
-      { name: 'PostgreSQL / MongoDB', level: 87 },
-      { name: 'REST & GraphQL APIs', level: 88 },
-      { name: 'Authentication / JWT', level: 84 },
+      { name: 'Node.js', icon: 'devicon-nodejs-plain' },
+      { name: 'Python', icon: 'devicon-python-plain' },
+      { name: 'Express', icon: 'devicon-express-original' },
+      { name: 'FastAPI', icon: 'devicon-fastapi-plain' },
+      { name: 'MongoDB', icon: 'devicon-mongodb-plain' }
     ],
   },
   {
     title: 'Tools & DevOps',
     color: '#a78bfa',
     skills: [
-      { name: 'Git / GitHub', level: 93 },
-      { name: 'Docker / Containers', level: 80 },
-      { name: 'CI/CD Pipelines', level: 78 },
-      { name: 'AWS / Cloud', level: 75 },
-      { name: 'Linux / Shell', level: 82 },
+      { name: 'Git', icon: 'devicon-git-plain' },
+      { name: 'GitHub', icon: 'devicon-github-original' },
+      { name: 'Docker', icon: 'devicon-docker-plain' },
+      { name: 'Linux', icon: 'devicon-linux-plain' },
+      { name: 'VS Code', icon: 'devicon-vscode-plain' }
     ],
   },
 ];
@@ -65,22 +64,13 @@ export default function Skills() {
                 <h3 className="skills__category-title">{category.title}</h3>
               </div>
 
-              <div className="skills__list">
+              <div className="skills__icon-list">
                 {category.skills.map((skill) => (
-                  <div key={skill.name} className="skills__item">
-                    <div className="skills__item-header">
-                      <span className="skills__item-name">{skill.name}</span>
-                      <span className="skills__item-level">{skill.level}%</span>
+                  <div key={skill.name} className="skills__icon-item">
+                    <div className="skills__icon-wrapper">
+                      <i className={skill.icon} />
                     </div>
-                    <div className="skills__bar">
-                      <div
-                        className="skills__bar-fill"
-                        style={{
-                          '--fill-width': `${skill.level}%`,
-                          '--fill-color': category.color,
-                        }}
-                      />
-                    </div>
+                    <span className="skills__icon-label">{skill.name}</span>
                   </div>
                 ))}
               </div>

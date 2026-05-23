@@ -33,52 +33,62 @@
   color: var(--text-primary);
 }
 
-/* Skill Items */
-.skills__list {
+/* Icon Grid */
+.skills__icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.skills__icon-item {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 8px;
+  width: 64px;
 }
 
-.skills__item-header {
+.skills__icon-wrapper {
+  width: 52px;
+  height: 52px;
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all var(--transition-base);
 }
 
-.skills__item-name {
-  font-size: 0.88rem;
-  font-weight: 500;
+.skills__icon-wrapper i {
+  font-size: 26px;
   color: var(--text-secondary);
+  transition: color var(--transition-base), transform var(--transition-base);
 }
 
-.skills__item-level {
-  font-size: 0.8rem;
-  font-weight: 600;
+.skills__icon-item:hover .skills__icon-wrapper {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skills__icon-item:hover .skills__icon-wrapper i {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.skills__icon-label {
+  font-size: 0.7rem;
+  font-weight: 500;
   color: var(--text-tertiary);
+  text-align: center;
+  line-height: 1.2;
+  transition: color var(--transition-base);
 }
 
-/* Skill Bar */
-.skills__bar {
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.06);
-  overflow: hidden;
-}
-
-.skills__bar-fill {
-  height: 100%;
-  border-radius: 3px;
-  width: 0;
-  background: linear-gradient(90deg, var(--fill-color), color-mix(in srgb, var(--fill-color) 60%, white));
-  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 0 10px var(--fill-color);
-}
-
-/* Animate bars when parent card is revealed */
-.revealed .skills__bar-fill {
-  width: var(--fill-width);
+.skills__icon-item:hover .skills__icon-label {
+  color: var(--text-secondary);
 }
 
 /* Responsive */
@@ -93,5 +103,18 @@
 @media (max-width: 600px) {
   .skills__category {
     padding: 24px;
+  }
+
+  .skills__icon-item {
+    width: 56px;
+  }
+
+  .skills__icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .skills__icon-wrapper i {
+    font-size: 22px;
   }
 }
