@@ -1,0 +1,97 @@
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.skills__category {
+  padding: 32px;
+}
+
+.skills__category:hover {
+  transform: translateY(-4px);
+}
+
+.skills__category-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.skills__category-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.skills__category-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Skill Items */
+.skills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills__item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skills__item-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skills__item-level {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+/* Skill Bar */
+.skills__bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.skills__bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--fill-color), color-mix(in srgb, var(--fill-color) 60%, white));
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px var(--fill-color);
+}
+
+/* Animate bars when parent card is revealed */
+.revealed .skills__bar-fill {
+  width: var(--fill-width);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills__category {
+    padding: 24px;
+  }
+}
