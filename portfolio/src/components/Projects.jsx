@@ -19,18 +19,18 @@ const projects = [
     featured: true,
   },
   {
-    title: 'Placeholder',
-    description: 'Placeholder',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
-    github: '#',
+    title: 'Discord Puzzle Bot',
+    description: 'Discord bot that tracks crossword progress and incorporrates minigames similar to Wordle and Geoguessr that multiple users can play at once strictly within a text channel.',
+    tags: ['Python', 'Discord.py'],
+    github: 'https://github.com/rpham-dev/puzzleBot',
     live: '#',
     featured: true,
   },
   {
-    title: 'Placeholder',
-    description: 'Placeholder',
-    tags: ['React', 'Python', 'FastAPI', 'Redis'],
-    github: '#',
+    title: 'MapleStory Shop Parser',
+    description: 'A Python script that uses PaddleOCR to capture and extract real-time item data from in-game shop browsing — including item names, stats, and prices. The parsed data is structured for post-processing, enabling analysis like price trend tracking across player-listed items.',
+    tags: ['Python', 'PaddleOCR'],
+    github: 'https://github.com/rpham-dev/ImageToTextParser',
     live: '#',
     featured: false,
   },
@@ -70,8 +70,6 @@ export default function Projects() {
           <span className="section-label">Projects</span>
           <h2 className="section-title">Things I've built</h2>
           <p className="section-subtitle">
-            A selection of projects that showcase my skills in full-stack development,
-            system design, and user experience.
           </p>
         </div>
 

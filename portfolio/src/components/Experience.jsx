@@ -8,7 +8,7 @@ const experiences = [
     company: 'Highlands Community Charter and Technical Schools',
     duration: 'Jan 2021 - Sep 2024',
     description:
-      '??????????',
+      'Worked with a team to manage and improve district-wide data systems and reporting processes',
     highlights: [
       'Maintained CDE compliance by preparing and submitting ADA reports',
       'Built Excel and Tableau dashboards to surface key insights for executive leadership',
@@ -22,7 +22,7 @@ const experiences = [
     company: 'Zinex Corporation',
     duration: 'Oct 2019 - Oct 2020',
     description:
-      '?????????',
+      'Supported research and production of high-voltage power rectifiers for industrial applications',
     highlights: [
       'Modernized engineering drawings and blueprints to current industry standards',
       'Designed rectifier tanks and power supply assemblies in SolidWorks',
@@ -36,7 +36,7 @@ const experiences = [
     company: 'Mason Controls',
     duration: 'Jun 2019 - Oct 2019',
     description:
-      '????????????',
+      'Assisted Senior Engineers in the testing and analysis of aircraft throttle controls',
     highlights: [
       'Conducted static analyses in Femap & NX Nastran to predict mechanical failures in throttle controls',
       'Oversaw 200,000-cycle endurance testing of rotary switches on throttle control quadrant assemblies',

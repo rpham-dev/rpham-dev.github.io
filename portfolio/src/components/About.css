@@ -16,18 +16,13 @@
   flex-shrink: 0;
 }
 
-.about__avatar-placeholder {
+.about__avatar-img {
   width: 80px;
   height: 80px;
   border-radius: var(--radius-lg);
-  background: var(--accent-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 800;
-  color: #fff;
-  box-shadow: var(--accent-glow-purple);
+  object-fit: cover;
+  box-shadow: var(--accent-glow);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .about__bio-title {

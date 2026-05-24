@@ -13,13 +13,14 @@ const techStack = [
   { name: 'TypeScript', color: '#3178C6' },
   { name: 'Node.js', color: '#339933' },
   { name: 'Python', color: '#3776AB' },
-  { name: 'PostgreSQL', color: '#4169E1' },
   { name: 'Docker', color: '#2496ED' },
-  { name: 'AWS', color: '#FF9900' },
   { name: 'Git', color: '#F05032' },
-  { name: 'Next.js', color: '#ffffff' },
-  { name: 'Tailwind', color: '#06B6D4' },
   { name: 'MongoDB', color: '#47A248' },
+  { name: 'Arduino', color: '#00979D' },
+  { name: 'Raspberry Pi', color: '#A22846' },
+  { name: 'SolidWorks', color: '#E2231A' },
+  { name: 'Oracle', color: '#F80000' },
+  { name: 'Visual Basic', color: '#945DB7' },
 ];
 
 export default function About() {
@@ -30,27 +31,32 @@ export default function About() {
       <div className="container">
         <div className="section-header reveal">
           <span className="section-label">About Me</span>
-          <h2 className="section-title">Passionate about crafting digital experiences</h2>
-          <p className="section-subtitle">
-            Here'shnologies I love working with.
-          </p>
+          <h2 className="section-title">Passionate about creating digital solutions</h2>
         </div>
 
         <div className="about__grid">
           {/* Bio Card */}
           <div className="about__bio glass-card reveal">
             <div className="about__bio-avatar">
-              <div className="about__avatar-placeholder">
-                <span>R</span>
-              </div>
+              <img
+                src="/Richard-trimmed.jpg"
+                alt="Richard Pham"
+                className="about__avatar-img"
+              />
             </div>
             <div className="about__bio-content">
               <h3 className="about__bio-title">Who I Am</h3>
               <p className="about__bio-text">
-                Placeholder
+                I'm a self-driven software developer with a background that spans mechanical engineering, data science, and
+                software engineering. Most recently, I worked as a data specialist for a school district, building dashboards with
+                Oracle SQL and Tableau to help district leadership tackle growth and identify areas for improvement. That experience
+                sharpened both my technical skills and my instinct for building things that actually solve real problems. I'm now
+                looking to grow as a software engineer, with a focus on AI and automation tools that make people's lives easier.
               </p>
               <p className="about__bio-text">
-                Placeholder
+                When I'm not coding, you can find me tinkering with side projects, contributing to open source, or exploring new tools
+                and technologies. Outside of tech, I enjoy tennis, board games, crossword puzzles, and the occasional online strategy
+                game.
               </p>
             </div>
           </div>
