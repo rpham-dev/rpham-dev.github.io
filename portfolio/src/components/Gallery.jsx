@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { X, ChevronLeft, ChevronRight, Play, ImageIcon } from 'lucide-react';
 import './Gallery.css';
@@ -237,7 +238,7 @@ export default function Gallery() {
       </div>
 
       {/* Lightbox */}
-      {galleryItems.length > 0 && (
+      {galleryItems.length > 0 && createPortal(
         <div
           className={`gallery__lightbox${lightboxOpen ? ' open' : ''}`}
           onClick={closeLightbox}
@@ -326,7 +327,8 @@ export default function Gallery() {
               </>
             )}
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </section>
   );

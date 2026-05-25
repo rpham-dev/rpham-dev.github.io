@@ -20,7 +20,8 @@ const skillCategories = [
       { name: 'Python', icon: 'devicon-python-plain' },
       { name: 'Express', icon: 'devicon-express-original' },
       { name: 'FastAPI', icon: 'devicon-fastapi-plain' },
-      { name: 'MongoDB', icon: 'devicon-mongodb-plain' }
+      { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
+      { name: 'Oracle SQL', icon: 'devicon-oracle-original' }
     ],
   },
   {

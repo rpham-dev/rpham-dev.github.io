@@ -18,6 +18,12 @@ const projects = [
     featured: true,
   },
   {
+    title: 'AI Christmas Album',
+    description: 'Leveraged Generative AI and RVC (Retrieval-based Voice Conversion) to create a Christmas album with singing vocals that mimic my own voice',
+    tags: ['RVC v2', 'ChatGPT'],
+    featured: false,
+  },
+  {
     title: 'Discord Puzzle Bot',
     description: 'Discord bot that tracks crossword progress and incorporrates minigames similar to Wordle and Geoguessr that multiple users can play at once strictly within a text channel.',
     tags: ['Python', 'Discord.py'],
@@ -29,12 +35,6 @@ const projects = [
     description: 'A Python script that uses PaddleOCR to capture and extract real-time item data from in-game shop browsing — including item names, stats, and prices. The parsed data is structured for post-processing, enabling analysis like price trend tracking across player-listed items.',
     tags: ['Python', 'PaddleOCR'],
     github: 'https://github.com/rpham-dev/ImageToTextParser',
-    featured: false,
-  },
-  {
-    title: 'AI Christmas Album',
-    description: 'Leveraged Generative AI and RVC (Retrieval-based Voice Conversion) to create a Christmas album with singing vocals that mimic my own voice',
-    tags: ['RVC v2', 'ChatGPT'],
     featured: false,
   }
 ];

@@ -139,7 +139,8 @@
   }
 
   .about__stats {
-    grid-template-columns: repeat(4, 1fr);
+    /* 2 items, so let's just make it 2 columns */
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -152,7 +153,15 @@
   }
 
   .about__stats {
-    grid-template-columns: 1fr 1fr;
+    /* Stack vertically on small mobile */
+    grid-template-columns: 1fr;
+  }
+
+  .about__stat {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 8px;
   }
 
   .about__tech {
