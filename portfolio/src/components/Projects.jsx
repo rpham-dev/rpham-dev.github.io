@@ -15,7 +15,6 @@ const projects = [
     description: 'Discord-integrated D&D companion that leverages OpenAI for dynamic character creation and ElevenLabs for AI-generated voice acting via text-to-speech.',
     tags: ['Python', 'Discord.py', 'OpenAI API', 'ElevenLabs'],
     github: 'https://github.com/rpham-dev/DnD-Character-Roleplaying-Tool',
-    live: '#',
     featured: true,
   },
   {
@@ -23,7 +22,6 @@ const projects = [
     description: 'Discord bot that tracks crossword progress and incorporrates minigames similar to Wordle and Geoguessr that multiple users can play at once strictly within a text channel.',
     tags: ['Python', 'Discord.py'],
     github: 'https://github.com/rpham-dev/puzzleBot',
-    live: '#',
     featured: true,
   },
   {
@@ -31,33 +29,14 @@ const projects = [
     description: 'A Python script that uses PaddleOCR to capture and extract real-time item data from in-game shop browsing — including item names, stats, and prices. The parsed data is structured for post-processing, enabling analysis like price trend tracking across player-listed items.',
     tags: ['Python', 'PaddleOCR'],
     github: 'https://github.com/rpham-dev/ImageToTextParser',
-    live: '#',
     featured: false,
   },
   {
-    title: 'Placeholder',
-    description: 'Placeholder',
-    tags: ['Next.js', 'MDX', 'Tailwind', 'Vercel'],
-    github: '#',
-    live: '#',
+    title: 'AI Christmas Album',
+    description: 'Leveraged Generative AI and RVC (Retrieval-based Voice Conversion) to create a Christmas album with singing vocals that mimic my own voice',
+    tags: ['RVC v2', 'ChatGPT'],
     featured: false,
-  },
-  {
-    title: 'Placeholder',
-    description: 'Placeholder',
-    tags: ['React', 'OpenAI API', 'Node.js', 'MongoDB'],
-    github: '#',
-    live: '#',
-    featured: false,
-  },
-  {
-    title: 'Placeholder',
-    description: 'Placeholder',
-    tags: ['Node.js', 'Express', 'Stripe', 'PostgreSQL'],
-    github: '#',
-    live: null,
-    featured: false,
-  },
+  }
 ];
 
 export default function Projects() {

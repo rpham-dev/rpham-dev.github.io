@@ -19,6 +19,7 @@ const navLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Gallery', href: '#gallery' },
 ];
 
 const socials = [
@@ -35,14 +36,21 @@ export default function LeftPanel() {
       const sections = navLinks.map((link) => link.href.slice(1));
       let currentSection = '';
 
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          // Adjust threshold as needed
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            currentSection = section;
-            break;
+      // Check if user has scrolled to the bottom of the page
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+
+      if (isAtBottom) {
+        currentSection = sections[sections.length - 1];
+      } else {
+        for (const section of sections) {
+          const el = document.getElementById(section);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            // Adjust threshold as needed
+            if (rect.top <= 200 && rect.bottom >= 200) {
+              currentSection = section;
+              break;
+            }
           }
         }
       }

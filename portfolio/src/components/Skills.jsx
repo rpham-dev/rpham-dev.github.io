@@ -46,7 +46,7 @@ export default function Skills() {
           <span className="section-label">Skills</span>
           <h2 className="section-title">My technical toolkit</h2>
           <p className="section-subtitle">
-            Technologies and toolss I use to bring ideas to life, organized by domain.
+            Technologies and tools I use to bring ideas to life, organized by domain.
           </p>
         </div>
 

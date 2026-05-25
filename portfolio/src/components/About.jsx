@@ -54,9 +54,8 @@ export default function About() {
                 looking to grow as a software engineer, with a focus on AI and automation tools that make people's lives easier.
               </p>
               <p className="about__bio-text">
-                When I'm not coding, you can find me tinkering with side projects, contributing to open source, or exploring new tools
-                and technologies. Outside of tech, I enjoy tennis, board games, crossword puzzles, and the occasional online strategy
-                game.
+                When I'm not coding, you can find me tinkering with side projects or exploring new tools and technologies.
+                Outside of tech, I enjoy tennis, board games, crossword puzzles, and the occasional online strategy game.
               </p>
             </div>
           </div>
@@ -77,7 +76,7 @@ export default function About() {
         </div>
 
         {/* Tech Stack */}
-        <div className="about__tech reveal">
+        <div className="about__tech glass-card reveal">
           <h3 className="about__tech-title">Tech Stack</h3>
           <div className="about__tech-grid">
             {techStack.map((tech) => (
