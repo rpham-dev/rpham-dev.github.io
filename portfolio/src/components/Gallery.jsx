@@ -27,7 +27,7 @@ const galleryItems = [
   // { type: 'image', src: '/gallery/screenshot.png', alt: 'Screenshot', title: 'My Project', description: 'A cool thing I built' },
   // { type: 'video', src: '/gallery/demo.mp4', alt: 'Demo', title: 'Live Demo', size: 'wide' },
   {
-    type: 'image', src: '/gallery/puzzlebot1.png', alt: 'puzzlebot1', title: 'Puzzle Bot 1', description: 'Puzzlebot being played. During gameplay, reaction buttons left and right are provided for turning the google camera in-game.'
+    type: 'image', src: '/gallery/puzzlebot1.png', alt: 'puzzlebot1', title: 'Puzzle Bot', description: 'Puzzlebot being played. During gameplay, reaction buttons left and right are provided for turning the google camera in-game.'
   },
   {
     type: 'video', src: '/gallery/Album.mp4', alt: 'album', title: 'Album', description: 'AI Christmas Album cover using model trained with my own voice.'
