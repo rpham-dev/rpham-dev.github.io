@@ -57,7 +57,7 @@ export default function Experience() {
           <span className="section-label">Experience</span>
           <h2 className="section-title">Where I've worked</h2>
           <p className="section-subtitle">
-            A timeline of my professional journey building software and leading
+            A timeline of my professional journey building tools and leading
             engineering teams.
           </p>
         </div>

@@ -37,6 +37,7 @@ const galleryItems = [
 export default function Gallery() {
   const sectionRef = useScrollReveal();
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Zoom & pan state
@@ -48,6 +49,16 @@ export default function Gallery() {
   const mediaRef = useRef(null);
   const imgRef = useRef(null);
   const videoRef = useRef(null);
+
+  // Sync mounted state with lightboxOpen with a delay for unmounting
+  useEffect(() => {
+    if (lightboxOpen) {
+      setMounted(true);
+    } else {
+      const timer = setTimeout(() => setMounted(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [lightboxOpen]);
 
   // Pause video when lightbox is closed
   useEffect(() => {
@@ -66,6 +77,20 @@ export default function Gallery() {
 
     window.addEventListener('blur', handleBlur);
     return () => window.removeEventListener('blur', handleBlur);
+  }, []);
+
+  // Disable hardware media keys from playing/pausing the video
+  useEffect(() => {
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.setActionHandler('play', () => { });
+      navigator.mediaSession.setActionHandler('pause', () => { });
+    }
+    return () => {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.setActionHandler('play', null);
+        navigator.mediaSession.setActionHandler('pause', null);
+      }
+    };
   }, []);
 
   // Clamp pan so image edges can't leave the container
@@ -238,7 +263,7 @@ export default function Gallery() {
       </div>
 
       {/* Lightbox */}
-      {galleryItems.length > 0 && createPortal(
+      {galleryItems.length > 0 && mounted && createPortal(
         <div
           className={`gallery__lightbox${lightboxOpen ? ' open' : ''}`}
           onClick={closeLightbox}
@@ -296,7 +321,6 @@ export default function Gallery() {
                       ref={videoRef}
                       src={activeItem.src}
                       controls
-                      autoPlay
                       style={{ maxWidth: '90vw', maxHeight: '75vh' }}
                     />
                   ) : (
